@@ -20,7 +20,7 @@ else ()
     message(FATAL_ERROR "Unsupported operating system")
 endif()
 
-find_library(OPENGL_LIBRARY glfw3 PATHS ${-})
+find_library(OPENGL_LIBRARY glfw3 PATHS ${OPENGL_LIBRARY_PATH})
 
 add_executable(opengl_demo src/main.cpp
         src/glad.c
